@@ -25,3 +25,4 @@ cout << "and formatting techniques in C++." << endl <<endl;
 // Program end
 cout << "\nProgram execution completed." << endl;
 return 0;
+}
