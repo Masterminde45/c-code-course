@@ -17,8 +17,29 @@ cout << "================================================" << endl;
 cout << "This program demonstrates using multiple headers" <<endl;
 cout << "and formatting techniques in C++." << endl <<endl;
 // Component 1: Basic information display
-
+cout << "------------ COMPONENT 1: BASIC INFO ------------" <<endl;
+// Create variables to store information
+/*
+A string is a sequence of characters
+A variable is a storage location that holds a value
+*/
+string name = "C++ Programming";
+string version = "C++17";
+string creator = "Bjarne Stroustrup";
+int yearCreated = 1985;
+string fact1 = "The first ISO C++ standard was published in 1998.";
+bool fact2 = true;
+int fact3 = 2017;
+// Display the information
+cout << "Lanuage: " << name << endl;
+cout<< "Version: " << version <<endl;
+cout << "Creator: " << creator << endl;
+cout << "Year Created: " << yearCreated << endl << endl;
+cout << "Interesting Fact 1: " << fact1 << endl;
+cout << "Interesting Fact 2: Supports object-oriented programming? " << (fact2 ? "Yes" : "No") << endl;
+cout << "Interesting Fact 3: C++17 standard publication year: " << fact3 << endl;
 // Component 2: Formated numeric output
+cout << "---------- COMPONENT 2: FORMATTED NUMBERS ---------" << endl;
 
 // component 3: Table display
 
