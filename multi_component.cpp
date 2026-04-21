@@ -67,6 +67,9 @@ cout << left << setw(15) << "int" << right << setw(20) << sizeof(int) << left <<
 cout << left << setw(15) << "double" << right << setw(20) << sizeof(double) << left << setw(20) << " ±1.7e^308" << endl;
 cout << left << setw(15) << "char" << right << setw(20) << sizeof(char) << left << setw(20) << " -128 to 127" << endl;
 cout << left << setw(15) << "bool" << right << setw(20) << sizeof(bool) << left << setw(20) << " true or false"  <<endl;
+// Add more rows to the table for additional data types
+cout << left << setw(15) << "float" <<right << setw(20) << sizeof(float) << left << setw(20) << " ±3.4e38"<<endl;
+cout<< left << setw(15) << "long long" <<right  << setw(20) << sizeof(long long) << left << setw(20) << " -2^63 to 2^63-1" <<endl;
 
 // Program end
 cout << "\nProgram execution completed." << endl;
