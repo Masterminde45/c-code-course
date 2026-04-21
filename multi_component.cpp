@@ -103,8 +103,14 @@ cout << " - Components: 4" <<endl;
 
 // Display a progress bar ( Simulated)
 
-
-
+cout << "Completion: [";
+int progress =80; // 80% complete
+// A loop allows something to happen over and over again
+for (int i = 0; i < 20; i++) {
+    if (i < progress/5) cout << "=";
+    else cout << " ";
+}
+ cout <<"]" << progress << "%" << endl;
 
 // Program end 
 cout << "\nProgram execution completed." << endl;
