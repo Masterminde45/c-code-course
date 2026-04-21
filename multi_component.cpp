@@ -55,8 +55,18 @@ cout << "Golden Ratio = " << goldenRatio << endl << endl;
 // Reset formating
 cout.unsetf(ios::fixed);
 cout << setprecision(6);
-// component 3: Table display
+// component 3:  Table display
+cout << "-------------- COMPONENT 3: TABLE DATA ------------- " <<endl;
+// setup table header
+// setw sets the field width for the next output
+cout << left <<setw(15) << "Data Type" << setw(20) << "Size (bytes)" << setw(20) << "Value Range" << endl;
+cout << string(55, '-') << endl;
 
+// Table rows
+cout << left << setw(15) << "int" << right << setw(20) << sizeof(int) << left << setw(20) << " -2^31 to 2^31-1" << endl;
+cout << left << setw(15) << "double" << right << setw(20) << sizeof(double) << left << setw(20) << " ±1.7e^308" << endl;
+cout << left << setw(15) << "char" << right << setw(20) << sizeof(char) << left << setw(20) << " -128 to 127" << endl;
+cout << left << setw(15) << "bool" << right << setw(20) << sizeof(bool) << left << setw(20) << " true or false"  <<endl;
 
 // Program end
 cout << "\nProgram execution completed." << endl;
