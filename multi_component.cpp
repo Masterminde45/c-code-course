@@ -5,6 +5,9 @@
 #include <string> // For string data type
 #include <chrono> // modern date and time handling
 #include <random> // for random number generation
+#include <ctime> // for fetching current time and date
+#include <cmath> // for mathematical stuff
+#include <sstream> // for convertion of current time into string
 // Using the standard namespace
 using namespace std;
 
@@ -71,7 +74,32 @@ cout << left << setw(15) << "bool" << right << setw(20) << sizeof(bool) << left 
 cout << left << setw(15) << "float" <<right << setw(20) << sizeof(float) << left << setw(20) << " ±3.4e38"<<endl;
 cout<< left << setw(15) << "long long" <<right  << setw(20) << sizeof(long long) << left << setw(20) << " -2^63 to 2^63-1" <<endl;
 
-// Program end
+// component 4: custom component - Program information
+cout << "+n------------- COMPONENT 4 PROGRAM INFO --------------" << endl;
+
+// get current date/time info (simulated);
+
+std::time_t now = std::time(nullptr);
+std::tm* localtime = std::localtime (&now);
+stringstream date;
+date << put_time(localtime, "%B %d, %Y");
+stringstream time;
+time << put_time(localtime,"%H; %M, %S");
+
+
+string userName = " Mats Pedersen";
+string currentDate = date.str();
+string cuurrentTime = time.str();
+int linesofcode = 75;
+
+// Format and display program information
+cout << " Program: Multi-Component" << endl;
+cout << "Author: " << userName <<endl;
+ 
+
+
+
+// Program end 
 cout << "\nProgram execution completed." << endl;
 return 0;
 }
