@@ -41,6 +41,20 @@ cout << "Interesting Fact 3: C++17 standard publication year: " << fact3 << endl
 // Component 2: Formated numeric output
 cout << "---------- COMPONENT 2: FORMATTED NUMBERS ---------" << endl;
 
+// CReate numeric variables
+double pi = 3.14159265358979323846;
+double e = 2.71828182845904523536;
+double goldenRatio = 1.61803398874989484820;
+
+// Display with different precision
+cout << "Default display:" << endl;
+cout << "Pi = " << pi << endl;
+cout << "e = " << e << endl;
+cout << "Golden Ratio = " << goldenRatio << endl << endl;
+
+// Reset formating
+cout.unsetf(ios::fixed);
+cout << setprecision(6);
 // component 3: Table display
 
 // Program end
