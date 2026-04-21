@@ -57,6 +57,7 @@ cout.unsetf(ios::fixed);
 cout << setprecision(6);
 // component 3: Table display
 
+
 // Program end
 cout << "\nProgram execution completed." << endl;
 return 0;
