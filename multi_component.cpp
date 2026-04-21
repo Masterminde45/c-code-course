@@ -95,7 +95,14 @@ int linesofcode = 75;
 // Format and display program information
 cout << " Program: Multi-Component" << endl;
 cout << "Author: " << userName <<endl;
- 
+cout << "Date: "  << currentDate << endl;
+cout << "Code Statistics:" << endl;
+cout <<  " - Lines of code: " << linesofcode << endl;
+cout << " - Header files: 8" <<endl;
+cout << " - Components: 4" <<endl;
+
+// Display a progress bar ( Simulated)
+
 
 
 
