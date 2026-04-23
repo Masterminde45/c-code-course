@@ -1,20 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class calc{
+// This class performs a simple addition and prints the result
+// along with a message based on the total.
+class Calculator{
 public:
-int x,y;
-void domath(){
-x=10;y=20;
-int res=x+y;
-cout<<"result is "<<res<<endl;
-if(res>25){
-cout<<"big number"<<endl;}
-else{cout<<"small number"<<endl;
+int firstnumber, secondNumber;
+// assign the values before performing the calculation.
+void calculateandPrintResult(){
+firstnumber =10;
+ secondNumber
+ =20;
+ // Compute the total and display;
+int totalResult = firstnumber + secondNumber;
+// Print a message based on the result.
+cout<<"result is "<< totalResult <<endl;
+if(totalResult >25 ){
+cout<<"big number"<<endl;
+}
+else {cout << "small number"<<endl;
 }
 }
+
 };
 int main(){
-calc c;
-c.domath();
+Calculator Calculator;
+Calculator.calculateandPrintResult();
 return 0;
 }
