@@ -1,0 +1,10 @@
+
+coder@c4334099e84b:~/c-code-course$ git push
+Everything up-to-date
+coder@c4334099e84b:~/c-code-course$ ./data_types_tests.exe
+Memory Usage Analysis:
+int uses: 4 bytes
+float uses: 4 bytes
+double uses: 8bytes
+char uses: 1 bytes
+bool uses: 1 bytes

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <climits>
 int main() {
-    // Declareing variables of different data types
+    
     int playerLevel = 25;
     float itemPrice = 19.99f;
     double preciseCalculation = 3.14159265359;
