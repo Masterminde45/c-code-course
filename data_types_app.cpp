@@ -69,6 +69,47 @@ std::cout << "Price as double: $" << priceAsDouble << " (uses " << sizeof(double
 double totalPrice = coffeePrice + laptopPrice;
 std::cout << "\nPrice calculations:" << std::endl;
 std::cout << "Coffee+Laptop total: $" << totalPrice << std::endl;
+// ------- CHARACTER DATA SECTION -------
+std::cout << "\n------ CHARACTER DATA SECTION -------" << std::endl;
+std::cout << "Selecting appropiate data types for character information:" <<std::endl;
+
+// Character varables for singel characters
+char grade = 'A';
+char symbol = '#';
+char initial = 'J';
+
+// Display character information
+std::cout << "Student grade:: " << grade << std:: endl; 
+std::cout << "Special symbol: " << symbol <<std :: endl;
+std::cout << "First initial: " << initial <<std ::endl;
+
+// Show how characters relate to numbers (ASCII values)
+std::cout << "\nCharacter to number conversion:" << std::endl;
+std::cout << "Grade '" << grade << "' has ASCII value: " << (int)grade << std::endl;
+std::cout << "Symbol '" << symbol << "' has ASCII value: " << (int)symbol << std::endl;
+
+// Show memory usage
+std::cout << "\nCharacter data memory data usage:" << std::endl;
+std::cout << "size of char: " << sizeof(char) << " bytes" << std::endl;
+
+// Character practice
+char firstinitial = 'M';
+char secondinitial = 'P';
+
+std::cout << "\nMy initials: " << firstinitial << secondinitial << std::endl;
+std::cout << " M has the ASCII value: " << (int)firstinitial << std::endl;
+std::cout << "P has the ASCII value: " << (int)secondinitial <<std::endl;
+char favouriteletter = 'A';
+std::cout << "My favourite letter is: " << favouriteletter << std::endl;
+std::cout << "A has the ASCII value: " << (int)favouriteletter << std::endl;
+return 0;
+
+
+
+
+
+
+
 
 return 0; 
 }
