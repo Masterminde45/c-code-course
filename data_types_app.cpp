@@ -10,6 +10,7 @@ int main() {
     std::cout << "This program demonstrates  appropiate usage of different data types" << std::endl;
     std::cout << "for  various kinds of information." << std::endl << std::endl;
 // ------ AGE DATA SECTION -------
+
     std::cout << "\n------ AGE DATA SECTION -------" <<std::endl;
     std::cout << "selecting appropiate data types for age infotmation:" << std::endl;
 
@@ -22,7 +23,6 @@ int main() {
     std::cout << "Child age: " << childAge << " years" << std::endl;
     std::cout << "Teen age: " << teenAge << " years" << std::endl;
     std::cout << "Adult age: " << adultAge << " years" << std::endl;
-
     // show memory usage
     std::cout << "\nAge data memory usage: " <<std::endl;
      std::cout << "size of int (for ages): " << sizeof(int) << "bytes" << std::endl;
@@ -31,9 +31,22 @@ int main() {
     std::cout << "\nAge calculations:" << std::endl;
     int totalAges = childAge + teenAge + adultAge;
     std::cout << "Total of all ages: " << totalAges << " years" << std::endl;
-
-
-
+// aditional age calculations
+std::cout << "\nAdditional age calculations: " << std::endl;
+double averageAge = totalAges /3.0;
+std::cout << " Average age: " << averageAge << " years" << std::endl;
+// calculation of average year of the three goups
+int oldestAge = adultAge;
+int youngestAge =childAge;
+int ageDifference = oldestAge - youngestAge;
+// calculation of  age differnce between youngest and oldest 
+std::cout << "Age difference between oldest and youngestage: " 
+<< ageDifference << " years" << std::endl;
+// calculation of my current age
+int birthYear = 2005;
+int currentYear = 2026;
+int mycurrentage =  currentYear - birthYear;
+std::cout << "my current age: " << mycurrentage << " years" << std::endl;
 
 return 0;
 }
