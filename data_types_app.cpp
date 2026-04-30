@@ -46,6 +46,29 @@ int birthYear = 2005;
 int currentYear = 2026;
 int mycurrentage =  currentYear - birthYear;
 std::cout << "my current age: " << mycurrentage << " years" << std::endl;
+// ------ PRICE DATA SECTION -------
+std::cout << "n------ PRICE DATA SECTION -------" <<std::endl;
+// Use double for price data (needs decimal precision)
+double coffeePrice = 3.99;
+double laptopPrice = 1299.49;
+double housePrice = 350000.00;
 
-return 0;
+// Display price information
+std::cout << "Cofee price: $" << coffeePrice << std::endl;
+std::cout << "Laptop Price: $" << laptopPrice << std::endl;
+std::cout << "House price: $" << housePrice << std::endl;
+
+// show memory usage
+float priceAsFloat = 19.99f;
+double priceAsDouble = 19.99;
+std::cout << "\nPrice storage comparison:" << std::endl;
+std::cout << "Price as float: $" << priceAsFloat << " (uses " << sizeof(float) << "bytes)" << std::endl;
+std::cout << "Price as double: $" << priceAsDouble << " (uses " << sizeof(double) << "bytes)" << std::endl;
+
+//Simpel price calculations
+double totalPrice = coffeePrice + laptopPrice;
+std::cout << "\nPrice calculations:" << std::endl;
+std::cout << "Coffee+Laptop total: $" << totalPrice << std::endl;
+
+return 0; 
 }
