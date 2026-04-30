@@ -102,6 +102,32 @@ std::cout << "P has the ASCII value: " << (int)secondinitial <<std::endl;
 char favouriteletter = 'A';
 std::cout << "My favourite letter is: " << favouriteletter << std::endl;
 std::cout << "A has the ASCII value: " << (int)favouriteletter << std::endl;
+// ------ BOOLEAN DATA SECTION -------
+std::cout <<"\n------ BOOLEAN DATA SECTION -------" << std::endl;
+std::cout << "Using boolean data types for true/false information:" <<std::endl;
+// Boolean variables for simple flags
+bool isActive = true;
+bool hasPermission=false;
+bool isCompleted = true;
+// Display boolean values (they show as 1 for true, 0 for false)
+std::cout << " User account active: " <<isActive << std::endl;
+std::cout << "User has admin Permission: " << hasPermission << std::endl;
+std::cout << "Task completed: " << isCompleted << std::endl;
+
+//show memory usage
+std::cout << "\nBoolean data memory usage:" << std::endl;
+std::cout << "size of bool: " << sizeof(bool) << " bytes" << std::endl;
+
+// simpel boolean comparisons
+std::cout <<"\nBoolean comparisons:" << std::endl;
+std::cout << "Are both account active AND task completed? ";
+if (isActive == true && isCompleted ==true) {
+    std::cout << "Yes" << std::endl;
+} else {
+    std::cout << "no" << std::endl;
+
+}
+
 return 0;
 
 
