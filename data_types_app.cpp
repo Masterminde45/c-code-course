@@ -32,7 +32,6 @@ int main() {
     int totalAges = childAge + teenAge + adultAge;
     std::cout << "Total of all ages: " << totalAges << " years" << std::endl;
 // aditional age calculations
-std::cout << "\nAdditional age calculations: " << std::endl;
 double averageAge = totalAges /3.0;
 std::cout << " Average age: " << averageAge << " years" << std::endl;
 // calculation of average year of the three goups
