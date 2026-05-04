@@ -23,6 +23,17 @@ std::cout << "Gender: " << playerGender <<std::endl;
 
     #include <iostream>
     int main(){
-    // Constants
+    // Constants for game configuration
+const int Max_PLAYER_LEVEL = 100;
+const double EXperience_MulTIPLIER = 1.5;
+const char GOLD_TIER_RATING = 'A';
+// using auto for type deduction
+auto currentScore = 98500;
+auto averagePlayTime =45.5;
+auto playerInitial = 'M';
+auto isONline = false;
+// Display constants
+std::cout << "\nPlayer Data (using auto:)" <<std::endl;
+
 
 
