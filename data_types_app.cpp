@@ -129,7 +129,7 @@ if (isActive == true && isCompleted ==true) {
 }
 
 // ------ SIMPLE PRODUCT EXAMPLE ------
-std::cout << "\n------ SIMPLE PRODUCT EXAMPLE---------" << std:endl;
+std::cout << "\n------ SIMPLE PRODUCT EXAMPLE---------" << std::endl;
 std::cout << "Combining multiple data types for a product" << std::endl;
 // ------- Product information using different data types
 int productId =12345;
@@ -146,10 +146,14 @@ bool inStock = true;
 
     // Simple calculations
     double salesTax = productPrice * 0.08;  // 8% tax
-    double totalPrice = productPrice + salesTax;
+    double totalproductPrice = productPrice + salesTax;
     std::cout << "\nPrice Calculations:" << std::endl;
     std::cout << "Sales tax (8%): $" << salesTax << std::endl;
-    
+    std::cout << "Total with tax: $" << totalPrice <<std::endl;
+    // Memory usage summary
+    int totalMemory = sizeof(productId) + sizeof(productPrice) + sizeof(productGrade) + sizeof(inStock);
+    std::cout << "\nTotal memory used for this product: " << totalMemory << " bytes" << std::endl;
+
 return 0;
 
 
