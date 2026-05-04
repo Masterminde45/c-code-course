@@ -128,6 +128,16 @@ if (isActive == true && isCompleted ==true) {
 
 }
 
+// ------ SIMPLE PRODUCT EXAMPLE ------
+std::cout << "\n------ SIMPLE PRODUCT EXAMPLE---------" << std:endl;
+std::cout << "Combining multiple data types for a product" << std::endl;
+// ------- Product information using different data types
+int productId =12345;
+double productPrice =29.99;
+char productGrade = 'B';
+bool inStock = true;
+
+// 
 return 0;
 
 

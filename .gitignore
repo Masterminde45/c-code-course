@@ -13,7 +13,7 @@
 export template cod
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+code inport tempate.StyleCopReport
 # Mono auto generated files
 mono_crash.*
 
