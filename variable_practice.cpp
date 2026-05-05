@@ -18,11 +18,8 @@ int main() {
     std::cout << "Speed: " <<Playerspeed <<std::endl;
     std::cout << "lives: " << playerlives <<std::endl;
 std::cout << "Gender: " << playerGender <<std::endl;
-    return 0;
-    }
 
-    #include <iostream>
-    int main(){
+    
     // Constants for game configuration
 const int Max_PLAYER_LEVEL = 100;
 const double EXperience_MulTIPLIER = 1.5;
@@ -33,7 +30,14 @@ auto averagePlayTime =45.5;
 auto playerInitial = 'M';
 auto isONline = false;
 // Display constants
+std::cout << "Game Configuration:" << std::endl;
+std::cout << "Max Player Level: " << Max_PLAYER_LEVEL << std::endl;
+std::cout << "Experience Multiplayer" << EXperience_MulTIPLIER << std::endl;
+// Display auto variables
 std::cout << "\nPlayer Data (using auto:)" <<std::endl;
-
-
-
+std::cout << "Score: " << currentScore << std::endl;
+std::cout << " Average Play Time: "  << averagePlayTime<<std::endl;
+std::cout << "Player initial: " << playerInitial <<std::endl;
+std::cout << "Online Status: " << isONline << std::endl;
+return 0;
+}
