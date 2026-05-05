@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip> // for formatting output
-
+#include <stdexcept> // for handeling invalid input
 using namespace std;
 
 // Constants for conversion formulas
@@ -44,10 +44,42 @@ int main() {
 
     return 0;
 }
+// Convert Celsius to Kelvin
+double celsiusToKelvin(double celsius) {
+    if (celsius < ABSOLUTE_ZERO_C) {
+        throw invalid_argument("Temperature cannot be below absolute zero.");
+    }
+    return celsius - ABSOLUTE_ZERO_C;
+}
+
+// Convert Kelvin to Celsius
+double kelvinToCelsius(double kelvin) {
+    if (kelvin < 0.0) {
+        throw invalid_argument("Temperature cannot be below absolute zero.");
+    }
+    return kelvin + ABSOLUTE_ZERO_C;
+}
+
+// Convert Fahrenheit to Kelvin
+double fahrenheitToKelvin(double fahrenheit) {
+    if (fahrenheit < ABSOLUTE_ZERO_F) {
+        throw invalid_argument("Temperature cannot be below absolute zero.");
+    }
+    // First convert to Celsius, then to Kelvin
+    double celsius = fahrenheitToCelsius(fahrenheit);
+    return celsiusToKelvin(celsius);
+}
 
 double celsiusToFahrenheit(double celsius) {
+    if (celsius < ABSOLUTE_ZERO_C) {
+        throw invalid_argument("Temperature cannot be below absolute zero.");
+    }
     return (celsius - ABSOLUTE_ZERO_C) * C_TO_F_FACTOR + ABSOLUTE_ZERO_F;
 }
-    double fahrenheitToCelsius(double fahrenheit){
-       return (fahrenheit - ABSOLUTE_ZERO_F) * F_TO_C_FACTOR + ABSOLUTE_ZERO_C;
- }
+
+double fahrenheitToCelsius(double fahrenheit) {
+    if (fahrenheit < ABSOLUTE_ZERO_F) {
+        throw invalid_argument("Temperature cannot be below absolute zero.");
+    }
+    return (fahrenheit - ABSOLUTE_ZERO_F) * F_TO_C_FACTOR + ABSOLUTE_ZERO_C;
+}
