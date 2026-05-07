@@ -35,7 +35,8 @@ double kelvinToCelsius(double kelvin);
 double fahrenheitToKelvin(double fahrenheit);
 double kelvinToFahrenheit(double kelvin);
 void validateTemperatureInput(double& temperature, const string& scaleName, double minimumTemperature);
-
+void displayTemperatureFacts(double celsius);
+void validateMenuChoice(int& chice);
 int main() {
     // Display Program header
     cout << "========================================" << endl;
@@ -62,6 +63,7 @@ int main() {
         // Get user's menu choice
         int choice;
         cin >> choice;
+        validateMenuChoice(choice);
 
         // Variable for temperature input
         double inputTemp, result;
@@ -75,6 +77,7 @@ int main() {
                 result = celsiusToFahrenheit(inputTemp);
                 cout << fixed << setprecision(2);
                 cout << inputTemp << " °C = " << result << " °F" << endl;
+                displayTemperatureFacts(inputTemp); 
                 break;
 
             case 2: // Fahrenheit to Celsius
@@ -84,6 +87,7 @@ int main() {
                 result = fahrenheitToCelsius(inputTemp);
                 cout << fixed << setprecision(2);
                 cout << inputTemp << " °F = " << result << " °C" << endl;
+                displayTemperatureFacts(result);
                 break;
 
             case 3: // Celsius to Kelvin
@@ -93,6 +97,7 @@ int main() {
                 result = celsiusToKelvin(inputTemp);
                 cout << fixed << setprecision(2);
                 cout << inputTemp << " °C = " << result << " K" << endl;
+                displayTemperatureFacts(inputTemp);
                 break;
 
             case 4: // Kelvin to Celsius
@@ -102,6 +107,7 @@ int main() {
                 result = kelvinToCelsius(inputTemp);
                 cout << fixed << setprecision(2);
                 cout << inputTemp << " K = " << result << " °C" << endl;
+                displayTemperatureFacts(result);
                 break;
 
             case 5: // Fahrenheit to Kelvin
@@ -111,6 +117,7 @@ int main() {
                 result = fahrenheitToKelvin(inputTemp);
                 cout << fixed << setprecision(2);
                 cout << inputTemp << " °F = " << result << " K" << endl;
+                displayTemperatureFacts(kelvinToCelsius(result));
                 break;
 
             case 6: // Kelvin to Fahrenheit
@@ -120,6 +127,7 @@ int main() {
                 result = kelvinToFahrenheit(inputTemp);
                 cout << fixed << setprecision(2);
                 cout << inputTemp << " K = " << result << " °F" << endl;
+                displayTemperatureFacts(fahrenheitToCelsius(result));
                 break;
 
             case 7: // Exit
@@ -186,6 +194,22 @@ double fahrenheitToCelsius(double fahrenheit) {
     }
     return (fahrenheit - ABSOLUTE_ZERO_F) * F_TO_C_FACTOR + ABSOLUTE_ZERO_C;
 }
+// input validation for menu choice
+void validateMenuChoice(int& choice) {
+    while (cin.fail() || choice < 1 || choice > 7) {
+        if (cin.fail()) {
+            cout << "Invalid input. Please enter a whole number between 1 and 7." << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+        else {
+            cout << "Invalid choice! Please select a number between 1 and 7." << endl;
+        }
+
+        cout << "Enter your choice (1-7): ";
+        cin >> choice;
+    }
+}
 
 // input validation for temperature input
 void validateTemperatureInput(double& temperature, const string& scaleName, double minimumTemperature) {
@@ -204,3 +228,45 @@ void validateTemperatureInput(double& temperature, const string& scaleName, doub
         cin >> temperature;
     }
 }
+// Display interesting facts about the temperature
+void displayTemperatureFacts(double celsius) {
+cout << "\nInteresting Facts about  this temperature:" << endl;
+    
+    if (celsius < ABSOLUTE_ZERO_C) {
+    cout << "This temperature is below absolute zero, which is physically impossible!" << endl;
+    }
+    else if (celsius == ABSOLUTE_ZERO_C) {
+       cout <<"This is absolute zero, the lovest possible temperature in the universe!" <<endl;
+    }
+    else if (celsius < FREEZING_POINT_C) {
+        cout << "This temperature is below the freezing point of water." << endl;
+
+    } 
+    else if (celsius == FREEZING_POINT_C){
+cout << "This is the freezing point of water at standard pressure" << endl;
+}
+else if (celsius < 20.0) {
+    cout << "This is a cool temperature." << endl;
+}
+else if (celsius < 30.0) {
+    cout << "this is a comfortable room temperature." << endl;
+}
+else if (celsius <40.0) {
+    cout <<  "This is a hot temperature." << endl;
+}
+else if (celsius < 100.0 ) {
+    cout << "this is a very hot temperature." << endl;
+}
+else if (celsius == 100.0) {
+    cout << "This is the boiling point of water at standard pressure." << endl;
+}
+else if (celsius > 100.0) {
+    cout << "This temperature is above the boiling point of water." << endl;
+
+}
+}
+
+
+        
+    
+
