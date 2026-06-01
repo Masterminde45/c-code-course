@@ -37,6 +37,19 @@ int main() {
     cout << "This program evaluates mathematical expressions" << endl;
     cout << "using various operators and precedence rules." << endl << endl;
 
+bool continueCalculations =true;
+while (continueCalculations) {
+    double num1, num2;
+    char op,choice;
+    cout <<"\nEnter a simple expression(number operator number): ";
+    cin  >> num1 >> op >>num2;
+    double result = preformOperation(num1, op, num2);
+     cout<<"Result:" << num1 <<" "  << op << " " << num2 << " = "  << result << endl;
+     cout <<"\nContiniuewith anothercalculation? (y/n) ";
+       cin >> choice;
+       continueCalculations = (choice == 'y' || choice == 'y');
+    }
     return 0;
 }
+
 
