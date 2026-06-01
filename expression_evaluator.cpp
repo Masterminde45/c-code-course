@@ -2,10 +2,11 @@
 #include <string>
 #include <cmath>
 using namespace std;
+
 // Function to perform basic arithmetic operations
 /* Please note that this comes before the main method
    We will see why when we cover functions */
-double preformOperation(double a, char op, double b) {
+double performOperation(double a, char op, double b) {
     switch (op) {
         case '+': return a + b; // Addition
         case '-': return a - b; // Subtraction
@@ -48,25 +49,25 @@ while (continueCalculations) {
     char op,choice;
     cout <<"\nEnter a simple expression(number operator number): ";
     cin  >> num1 >> op >>num2;
-    double result = preformOperation(num1, op, num2);
+    double result = performOperation(num1, op, num2);
      cout<<"Result:" << num1 <<" "  << op << " " << num2 << " = "  << result << endl;
-     cout <<"\nContiniuewith anothercalculation? (y/n) ";
+     cout <<"\nContinue with another calculation? (y/n) ";
        cin >> choice;
        continueCalculations = (choice == 'y' || choice == 'y');
     }
-  
-    // Function to preform relational operations
-    bool performComparison(double a, string op, double b) {
-        if (op == "==") return a == b; // Equal to
-        if (op "!=") return a != b; // Not equal to
-        if (op == "<") return a < b; // Less than
-        if (op == ">") return a > b; // Greater than
-        if (op == "<=") return a <= b; // Less than or equal to
-        if (op == ">=") return a >= b; // Greater than or equal to
-     cout << "Error: Unknown comparison operator!" << endl;
-        return false;
-    }  
     return 0;
+}
+
+// Function to preform relational operations
+bool performComparison(double a, string op, double b) {
+    if (op == "==") return a == b; // Equal to
+    if (op == "!=") return a != b; // Not equal to
+    if (op == "<") return a < b; // Less than
+    if (op == ">") return a > b; // Greater than
+    if (op == "<=") return a <= b; // Less than or equal to
+    if (op == ">=") return a >= b; // Greater than or equal to
+    cout << "Error: Unknown comparison operator!" << endl;
+    return false;
 }
 
 
