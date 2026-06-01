@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 // Function to perform basic arithmetic operations
 /* Please note that this comes before the main method
@@ -10,6 +11,7 @@ double preformOperation(double a, char op, double b) {
         case '-': return a - b; // Subtraction
         case '*': return a * b; // Multiplication
         case '/':
+
             if (b != 0) {
                 return a / b;
             } else {
@@ -23,6 +25,9 @@ double preformOperation(double a, char op, double b) {
                 cout << "Error: Division by zero!" << endl;
                 return 0;
             }
+            case '^':
+            return pow(a, b); //Exponentiation
+        
         default:
             cout << "Error: Unknown operator!" << endl;
             return 0;
@@ -49,6 +54,18 @@ while (continueCalculations) {
        cin >> choice;
        continueCalculations = (choice == 'y' || choice == 'y');
     }
+  
+    // Function to preform relational operations
+    bool performComparison(double a, string op, double b) {
+        if (op == "==") return a == b; // Equal to
+        if (op "!=") return a != b; // Not equal to
+        if (op == "<") return a < b; // Less than
+        if (op == ">") return a > b; // Greater than
+        if (op == "<=") return a <= b; // Less than or equal to
+        if (op == ">=") return a >= b; // Greater than or equal to
+     cout << "Error: Unknown comparison operator!" << endl;
+        return false;
+    }  
     return 0;
 }
 
