@@ -81,9 +81,21 @@ else if(operationType ==3) {
     cout << "1. AND/OR(value operator value)"<<endl;
     cout << "2. NOT (not value)" <<endl;
     cout << "Enter choice (1 or 2): ";
-    int logicChoise;
-    cin >> logicChoise;
-    
+    int logicChoice;
+    cin >> logicChoice;
+    if (logicChoice == 1) {
+        bool val1, val2;
+        string op;
+        cout << "\nEnter values as 1 (true) or 0 (false)" << endl;
+        cout << "Expression (value operator value): ";
+        cin >> val1 >> op >> val2;
+        bool result = performLogical(val1, op, val2);
+        cout << "Result: !" << (val1 ? "true" : "false") << "  "   << op << " "
+        << (val2 ?         
+        
+        
+        bool result = performLogicalNot
+    }
 
 }
 
@@ -111,7 +123,7 @@ bool performComparison (double a, string op, double b) {
 
 
 // Function to preform logical operations
-bool performLogicalOperation(bool a, string op,bool b) {
+bool performLogical(bool a, string op,bool b) {
  if (op =="&&") return a && b; // Logical AND
  if(op == "||") return a || b; // Logical OR
  cout << "Error: Unknown logical operator!" << endl;
